@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Gift</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .photo-gallery img {
+            width: calc((100% / 4) - 20px);
+            margin: 10px;
+            border: 2px solid #ff6f61;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .message-board {
+            display: flex;
+            flex-direction: column;
+        }
+        .message-board textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .message-board button {
+            padding: 10px;
+            font-size: 1em;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>半年快樂！</h1>
+    </header>
+    <nav>
+        <a href="#welcome">Welcome</a>
+        <a href="#story">Our Story</a>
+        <a href="#photos">Photos</a>
+        <a href="#messages">Messages</a>
+        <a href="#future">Future Plans</a>
+    </nav>
+    <section id="welcome">
+        <h2>Welcome</h2>
+        <p>這裡是一個很特殊的網頁，是我特地寫來慶祝我們半年紀念日的網頁。</p>
+    </section>
+    <section id="story">
+        <h2>Our Story</h2>
+        <p>我們在2/2在omi相遇然後相愛，到現在已經半年囉！謝謝你打破我的半年魔咒，我們的故事才剛要開始，我愛你。</p>
+    </section>
+    <section id="photos">
+        <h2>Photos</h2>
+        <div class="photo-gallery">
+            <img src="png/1708274849007.jpg" alt="Photo 1">
+            <img src="687536.jpg" alt="Photo 2">
+            <img src="png/1711343402885.jpg" alt="Photo 3">
+            <img src="png/1708873857367.jpg" alt="Photo 4">
+            <img src="png/02.jpg" alt="Photo 5">
+            <img src="png/692956_0.jpg" alt="Photo 6">
+            <img src="png/692955_0.jpg" alt="Photo 7">
+            <img src="png/692957_0.jpg" alt="Photo 8">
+            <img src="png/692958_0.jpg" alt="Photo 9">
+            <img src="png/692959_0.jpg" alt="Photo 10">
+            <img src="png/692960_0.jpg" alt="Photo 11">
+            <img src="png/692961_0.jpg" alt="Photo 12">
+            <img src="png/1709795795279.jpg" alt="Photo 13">
+            <img src="png/1708873842597.jpg" alt="Photo 14">
+            <img src="png/01.jpg" alt="Photo 15">
+        </div>
+    </section>
+    <section id="messages">
+        <h2>Messages</h2>
+        <div class="message-board">
+            <textarea id="message" rows="4" placeholder="Write your message here..."></textarea>
+            <button onclick="addMessage()">Submit</button>
+            <div id="message-list"></div>
+        </div>
+    </section>
+    <section id="future">
+        <h2>Future Plans</h2>
+        <p>我要娶林宜岑當我老婆！</p>
+        <p>[Add your future plans here]</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        function addMessage() {
+            const message = document.getElementById('message').value;
+            if (message) {
+                const messageList = document.getElementById('message-list');
+                const messageItem = document.createElement('p');
+                messageItem.textContent = message;
+                messageList.appendChild(messageItem);
+                document.getElementById('message').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
